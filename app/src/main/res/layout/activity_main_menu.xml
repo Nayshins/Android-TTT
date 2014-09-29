@@ -1,4 +1,5 @@
-<LinearLayout
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -6,7 +7,6 @@
     android:layout_alignParentBottom="false"
     android:layout_alignParentRight="false"
     android:layout_alignParentEnd="true"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="#ffffffff"
     android:baselineAligned="true">
 
@@ -27,7 +27,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/new_game"
-        android:id="@+id/button"
+        android:id="@+id/vscomputer"
         android:layout_marginTop="50dp"
         android:onClick="vsComputer"
         android:textColor="#ff3f3f3f"
@@ -40,7 +40,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/human"
-        android:id="@+id/button2"
+        android:id="@+id/vshuman"
         android:onClick="vsHuman"
         android:textColor="#ff3f3f3f"
         android:background="#ffdadada"

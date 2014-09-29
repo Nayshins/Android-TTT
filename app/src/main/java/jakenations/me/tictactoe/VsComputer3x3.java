@@ -6,7 +6,6 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TableLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -47,7 +46,7 @@ public class VsComputer3x3 extends Activity {
     }
 
     public void runGame(View view) throws Exception {
-        int move = getButton((Button) view);
+        int move = setButton((Button) view);
         setHumanMove(move);
         setButtonStatus(false);
         if (!rules.isGameOver()) {
@@ -67,7 +66,7 @@ public class VsComputer3x3 extends Activity {
         }
     }
 
-    private int getButton(Button view) {
+    private int setButton(Button view) {
         view.setText(R.string.marker_X);
         view.setClickable(false);
         return convertCellToInt((String) view.getTag());
