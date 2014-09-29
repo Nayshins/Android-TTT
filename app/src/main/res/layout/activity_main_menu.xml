@@ -1,0 +1,51 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/linearLayout"
+    android:layout_alignParentBottom="false"
+    android:layout_alignParentRight="false"
+    android:layout_alignParentEnd="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffffffff"
+    android:baselineAligned="true">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Welcome"
+        android:id="@+id/MMText"
+        android:layout_marginTop="30dp"
+        android:textColor="#ff4173ff"
+        android:textSize="56sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_game"
+        android:id="@+id/button"
+        android:layout_marginTop="50dp"
+        android:onClick="vsComputer"
+        android:textColor="#ff3f3f3f"
+        android:background="#ffdadada"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:typeface="sans" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/human"
+        android:id="@+id/button2"
+        android:onClick="vsHuman"
+        android:textColor="#ff3f3f3f"
+        android:background="#ffdadada"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:typeface="sans"
+        android:layout_marginTop="10dp" />
+</LinearLayout>
