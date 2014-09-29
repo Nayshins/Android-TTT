@@ -16,7 +16,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         android:textStyle="bold"
-        android:textColor="#ff4173ff" />
+        android:textColor="#ff4173ff"
+        android:gravity="center" />
 
     <TableLayout
         android:layout_width="wrap_content"

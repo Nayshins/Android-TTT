@@ -10,15 +10,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import me.jakenations.Board;
-import me.jakenations.Board3x3;
-import me.jakenations.GameRules;
+import me.jakenations.Board4x4;
+import me.jakenations.GameRules4x4;
 import me.jakenations.Rules;
 
 
-public class VsHuman3x3 extends Activity {
-
+public class VsHuman4x4 extends Activity {
     private static final HashMap<String, Integer> cellToMoveMap;
-
     static {
         cellToMoveMap = new HashMap<String, Integer>();
         cellToMoveMap.put("c0", 0);
@@ -30,10 +28,16 @@ public class VsHuman3x3 extends Activity {
         cellToMoveMap.put("c6", 6);
         cellToMoveMap.put("c7", 7);
         cellToMoveMap.put("c8", 8);
+        cellToMoveMap.put("c9", 9);
+        cellToMoveMap.put("c10", 10);
+        cellToMoveMap.put("c11", 11);
+        cellToMoveMap.put("c12", 12);
+        cellToMoveMap.put("c13", 13);
+        cellToMoveMap.put("c14", 14);
+        cellToMoveMap.put("c15", 15);
     }
-
-    private Board board = new Board3x3();
-    private Rules rules = new GameRules(board);
+    private Board board = new Board4x4();
+    private Rules rules = new GameRules4x4(board);
     private ArrayList<View> touchables;
 
     private int turnCount = 0;
@@ -41,7 +45,7 @@ public class VsHuman3x3 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vs_human3x3);
+        setContentView(R.layout.activity_human4x4);
         this.touchables = findViewById(R.id.tableLayout).getTouchables();
     }
 
@@ -97,7 +101,6 @@ public class VsHuman3x3 extends Activity {
         }
 
     }
-
     private void setButtonStatus(boolean state) {
         for (View touchable : touchables) {
             if (touchable instanceof Button) {

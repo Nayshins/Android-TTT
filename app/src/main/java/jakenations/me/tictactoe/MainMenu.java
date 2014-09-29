@@ -26,9 +26,13 @@ public class MainMenu extends Activity {
 
     }
 
+    public void vsComputer4x4(View view) {
+        Intent intent = new Intent(this, VsComputer4x4.class);
+        startActivity(intent);
+}
 
-
-    public void runGame(View view) {
-
+    public void vsHuman4x4 (View view) {
+        Intent intent = new Intent(this, VsHuman4x4.class);
+        startActivity(intent);
     }
 }

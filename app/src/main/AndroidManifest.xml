@@ -37,6 +37,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="jakenations.me.tictactoe.MainMenu" />
         </activity>
+        <activity
+            android:name=".VsHuman4x4"
+            android:label="@string/title_activity_human4x4"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jakenations.me.tictactoe.MainMenu" />
+        </activity>
     </application>
 
 </manifest>

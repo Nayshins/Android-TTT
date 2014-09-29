@@ -39,9 +39,35 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:text="@string/vsComputer4x4"
+        android:id="@+id/vsComputer4x4"
+        android:onClick="vsComputer4x4"
+        android:textColor="#ff3f3f3f"
+        android:background="#ffdadada"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:typeface="sans"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
         android:text="@string/human"
         android:id="@+id/vshuman"
         android:onClick="vsHuman"
+        android:textColor="#ff3f3f3f"
+        android:background="#ffdadada"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:typeface="sans"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/human4x4"
+        android:id="@+id/vshuman4x4"
+        android:onClick="vsHuman4x4"
         android:textColor="#ff3f3f3f"
         android:background="#ffdadada"
         android:textStyle="bold"
