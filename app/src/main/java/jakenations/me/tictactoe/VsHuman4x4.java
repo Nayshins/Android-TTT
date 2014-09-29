@@ -1,6 +1,7 @@
 package jakenations.me.tictactoe;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -53,7 +54,7 @@ public class VsHuman4x4 extends Activity {
         char marker = getCurrentPlayer();
         setButtonStatus(false);
         setButtonText((Button) view, marker);
-        int move = getButton((Button) view);
+        int move = getButtonIndex((Button) view);
         setHumanMove(move, marker);
         setButtonStatus(true);
         if (rules.isGameOver()) {
@@ -61,6 +62,22 @@ public class VsHuman4x4 extends Activity {
             gameOver(marker);
         }
         turnCount ++;
+    }
+
+    private char getCurrentPlayer() {
+        if (turnCount % 2 == 0) {
+            return 'X';
+        } else {
+            return 'O';
+        }
+    }
+
+    private void setButtonStatus(boolean state) {
+        for (View touchable : touchables) {
+            if (touchable instanceof Button) {
+                touchable.setEnabled(state);
+            }
+        }
     }
 
     private void setButtonText(Button view, char marker) {
@@ -71,21 +88,13 @@ public class VsHuman4x4 extends Activity {
         }
     }
 
-    public char getCurrentPlayer() {
-        if (turnCount % 2 == 0) {
-            return 'X';
-        } else {
-            return 'O';
-        }
+    private int getButtonIndex(Button view) {
+        view.setClickable(false);
+        return convertCellToInt((String) view.getTag());
     }
 
     public void setHumanMove(int move, char marker) throws Exception {
         board.setCell(marker, move);
-    }
-
-    private int getButton(Button view) {
-        view.setClickable(false);
-        return convertCellToInt((String) view.getTag());
     }
 
     public int convertCellToInt(String cellID) {
@@ -101,13 +110,9 @@ public class VsHuman4x4 extends Activity {
         }
 
     }
-    private void setButtonStatus(boolean state) {
-        for (View touchable : touchables) {
-            if (touchable instanceof Button) {
-                touchable.setEnabled(state);
-            }
 
-
-        }
+    public void returnToMenu(View view) {
+        Intent intent = new Intent(this, MainMenu.class);
+        startActivity(intent);
     }
 }

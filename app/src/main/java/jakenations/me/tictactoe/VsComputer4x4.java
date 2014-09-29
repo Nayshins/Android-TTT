@@ -21,7 +21,6 @@ import me.jakenations.Rules;
 
 public class VsComputer4x4 extends Activity {
     private static final HashMap<String, Integer> cellToMoveMap;
-
     static {
         cellToMoveMap = new HashMap<String, Integer>();
         cellToMoveMap.put("c0", 0);
@@ -41,6 +40,7 @@ public class VsComputer4x4 extends Activity {
         cellToMoveMap.put("c14", 14);
         cellToMoveMap.put("c15", 15);
     }
+
     private Board board = new Board4x4();
     private Rules rules = new GameRules4x4(board);
     private Player player2 = new ComputerPlayer('O', board, rules);
@@ -53,7 +53,7 @@ public class VsComputer4x4 extends Activity {
     }
 
     public void runGame(View view) throws Exception {
-        int move = setButton((Button) view);
+        int move = setButtonText((Button) view);
         setHumanMove(move);
         setButtonStatus(false);
         if (!rules.isGameOver()) {
@@ -73,7 +73,7 @@ public class VsComputer4x4 extends Activity {
         }
     }
 
-    private int setButton(Button view) {
+    private int setButtonText(Button view) {
         view.setText(R.string.marker_X);
         view.setClickable(false);
         return convertCellToInt((String) view.getTag());

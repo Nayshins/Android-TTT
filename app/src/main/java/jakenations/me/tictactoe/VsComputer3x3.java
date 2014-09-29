@@ -55,7 +55,6 @@ public class VsComputer3x3 extends Activity {
             gameOver("X");
             setButtonStatus(false);
         }
-
     }
 
     private void setButtonStatus(boolean state) {
@@ -97,19 +96,12 @@ public class VsComputer3x3 extends Activity {
         return cellToMoveMap.get(cellID);
     }
 
-
-
     public void setHumanMove(int move) throws Exception {
         board.setCell('X', move);
     }
 
     public void getComputerMove() throws Exception{
         new ComputerMoveTask().execute();
-    }
-
-    public void returnToMenu(View view) {
-        Intent intent = new Intent(this, MainMenu.class);
-        startActivity(intent);
     }
 
     private class ComputerMoveTask extends AsyncTask<Void, Void, Integer> {
@@ -134,6 +126,12 @@ public class VsComputer3x3 extends Activity {
                 setButtonStatus(true);
             }
         }
+
+    }
+
+    public void returnToMenu(View view) {
+        Intent intent = new Intent(this, MainMenu.class);
+        startActivity(intent);
     }
 
 

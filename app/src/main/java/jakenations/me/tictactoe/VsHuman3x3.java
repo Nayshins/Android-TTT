@@ -1,6 +1,7 @@
 package jakenations.me.tictactoe;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -59,14 +60,6 @@ public class VsHuman3x3 extends Activity {
         turnCount ++;
     }
 
-    private void setButtonText(Button view, char marker) {
-        if (marker == 'X') {
-            view.setText(R.string.marker_X);
-        } else if (marker == 'O') {
-            view.setText(R.string.marker_O);
-        }
-    }
-
     public char getCurrentPlayer() {
         if (turnCount % 2 == 0) {
             return 'X';
@@ -75,13 +68,29 @@ public class VsHuman3x3 extends Activity {
         }
     }
 
-    public void setHumanMove(int move, char marker) throws Exception {
-        board.setCell(marker, move);
+    private void setButtonStatus(boolean state) {
+        for (View touchable : touchables) {
+            if (touchable instanceof Button) {
+                touchable.setEnabled(state);
+            }
+        }
+    }
+
+    private void setButtonText(Button view, char marker) {
+        if (marker == 'X') {
+            view.setText(R.string.marker_X);
+        } else if (marker == 'O') {
+            view.setText(R.string.marker_O);
+        }
     }
 
     private int getButton(Button view) {
         view.setClickable(false);
         return convertCellToInt((String) view.getTag());
+    }
+
+    public void setHumanMove(int move, char marker) throws Exception {
+        board.setCell(marker, move);
     }
 
     public int convertCellToInt(String cellID) {
@@ -95,16 +104,10 @@ public class VsHuman3x3 extends Activity {
         } else {
             textView.setText("Game over! " + marker + " is the winner");
         }
-
     }
 
-    private void setButtonStatus(boolean state) {
-        for (View touchable : touchables) {
-            if (touchable instanceof Button) {
-                touchable.setEnabled(state);
-            }
-
-
-        }
+    public void returnToMenu(View view) {
+        Intent intent = new Intent(this, MainMenu.class);
+        startActivity(intent);
     }
 }
