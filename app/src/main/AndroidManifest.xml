@@ -29,6 +29,14 @@
             android:name=".VsHuman3x3"
             android:label="@string/title_activity_vs_human3x3" >
         </activity>
+        <activity
+            android:name=".VsComputer4x4"
+            android:label="@string/title_activity_vs_computer4x4"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="jakenations.me.tictactoe.MainMenu" />
+        </activity>
     </application>
 
 </manifest>

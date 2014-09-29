@@ -13,5 +13,6 @@
     <string name="Welcome">Welcome to Tic Tac Toe!</string>
     <string name="title_activity_vs_human3x3">vsHuman3x3</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_vs_computer4x4">VsComputer4x4</string>
 
 </resources>
