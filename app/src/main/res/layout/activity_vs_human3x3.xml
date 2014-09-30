@@ -141,6 +141,7 @@
         android:layout_height="wrap_content"
         android:onClick="returnToMenu"
         android:height="50dp"
+        android:id="@+id/menu"
         android:text="@string/main_menu"
         android:layout_marginTop="70dp"
         android:typeface="sans"
