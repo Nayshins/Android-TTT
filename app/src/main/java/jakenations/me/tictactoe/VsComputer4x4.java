@@ -24,22 +24,9 @@ public class VsComputer4x4 extends Activity {
     private static final HashMap<String, Integer> cellToMoveMap;
     static {
         cellToMoveMap = new HashMap<String, Integer>();
-        cellToMoveMap.put("c0", 0);
-        cellToMoveMap.put("c1", 1);
-        cellToMoveMap.put("c2", 2);
-        cellToMoveMap.put("c3", 3);
-        cellToMoveMap.put("c4", 4);
-        cellToMoveMap.put("c5", 5);
-        cellToMoveMap.put("c6", 6);
-        cellToMoveMap.put("c7", 7);
-        cellToMoveMap.put("c8", 8);
-        cellToMoveMap.put("c9", 9);
-        cellToMoveMap.put("c10", 10);
-        cellToMoveMap.put("c11", 11);
-        cellToMoveMap.put("c12", 12);
-        cellToMoveMap.put("c13", 13);
-        cellToMoveMap.put("c14", 14);
-        cellToMoveMap.put("c15", 15);
+        for (int i = 0; i < 16; i++) {
+            cellToMoveMap.put("c" + i, i);
+        }
     }
 
     private Board board = new Board4x4();
