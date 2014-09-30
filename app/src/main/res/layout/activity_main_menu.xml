@@ -8,46 +8,34 @@
     android:layout_alignParentRight="false"
     android:layout_alignParentEnd="true"
     android:background="#ffffffff"
-    android:baselineAligned="true">
+    android:baselineAligned="true"
+    android:gravity="bottom">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/Welcome"
         android:id="@+id/MMText"
         android:layout_marginTop="30dp"
-        android:textColor="#ff4173ff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#33B5E5"
         android:textSize="56sp"
         android:textStyle="bold"
         android:textAlignment="center"
         android:gravity="center" />
 
     <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
         android:text="@string/new_game"
         android:id="@+id/vscomputer"
-        android:layout_marginTop="50dp"
         android:onClick="vsComputer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
         android:textColor="#ff3f3f3f"
-        android:background="#ffdadada"
+        android:background="#97dadada"
         android:textStyle="bold"
         android:textSize="30sp"
         android:typeface="sans" />
-
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/vsComputer4x4"
-        android:id="@+id/vsComputer4x4"
-        android:onClick="vsComputer4x4"
-        android:textColor="#ff3f3f3f"
-        android:background="#ffdadada"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:typeface="sans"
-        android:layout_marginTop="10dp" />
 
     <Button
         android:layout_width="fill_parent"
@@ -56,11 +44,24 @@
         android:id="@+id/vshuman"
         android:onClick="vsHuman"
         android:textColor="#ff3f3f3f"
-        android:background="#ffdadada"
+        android:background="#97dadada"
         android:textStyle="bold"
         android:textSize="30sp"
         android:typeface="sans"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="1dp" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/vsComputer4x4"
+        android:id="@+id/vsComputer4x4"
+        android:onClick="vsComputer4x4"
+        android:textColor="#ff3f3f3f"
+        android:background="#97dadada"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:typeface="sans"
+        android:layout_marginTop="1dp" />
 
     <Button
         android:layout_width="fill_parent"
@@ -69,9 +70,10 @@
         android:id="@+id/vshuman4x4"
         android:onClick="vsHuman4x4"
         android:textColor="#ff3f3f3f"
-        android:background="#ffdadada"
+        android:background="#97dadada"
         android:textStyle="bold"
         android:textSize="30sp"
         android:typeface="sans"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="1dp" />
+
 </LinearLayout>

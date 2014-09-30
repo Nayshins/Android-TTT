@@ -12,10 +12,11 @@
     <string name="draw">Draw! Game Over!</string>
     <string name="Welcome">Welcome to Tic Tac Toe!</string>
     <string name="title_activity_vs_human3x3">vsHuman3x3</string>
-    <string name="hello_world">Hello world!</string>
     <string name="title_activity_vs_computer4x4">VsComputer4x4</string>
     <string name="vsComputer4x4">Vs. Computer 4 x 4</string>
     <string name="title_activity_human4x4">Human4x4</string>
-    <string name="human4x4">Vs. Human 4x4</string>
+    <string name="human4x4">Vs. Human 4 x 4</string>
+    <string name="gameOver">Game over! \u0020 </string>
+    <string name="isthewinner"> \u0020 is the winner!</string>
 
 </resources>

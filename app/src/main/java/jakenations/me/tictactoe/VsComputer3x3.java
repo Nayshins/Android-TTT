@@ -25,15 +25,9 @@ public class VsComputer3x3 extends Activity {
     private static final HashMap<String, Integer> cellToMoveMap;
     static {
         cellToMoveMap = new HashMap<String, Integer>();
-        cellToMoveMap.put("c0", 0);
-        cellToMoveMap.put("c1", 1);
-        cellToMoveMap.put("c2", 2);
-        cellToMoveMap.put("c3", 3);
-        cellToMoveMap.put("c4", 4);
-        cellToMoveMap.put("c5", 5);
-        cellToMoveMap.put("c6", 6);
-        cellToMoveMap.put("c7", 7);
-        cellToMoveMap.put("c8", 8);
+        for (int i = 0; i < 9; i++) {
+            cellToMoveMap.put("c" + i, i);
+        }
     }
     private Board board = new Board3x3();
     private Rules rules = new GameRules(board);
@@ -78,7 +72,7 @@ public class VsComputer3x3 extends Activity {
         if (rules.isDraw()) {
             textView.setText(getString(R.string.draw));
         } else {
-            textView.setText("Game over! " + marker + " is the winner");
+            textView.setText(getString(R.string.gameOver) + marker + getString(R.string.isthewinner));
         }
 
     }

@@ -73,7 +73,7 @@ public class VsComputer4x4 extends Activity {
         if (rules.isDraw()) {
             textView.setText(getString(R.string.draw));
         } else {
-            textView.setText("Game over! " + marker + " is the winner");
+            textView.setText(getString(R.string.gameOver) + marker + getString(R.string.isthewinner));
         }
 
     }
