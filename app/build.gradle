@@ -19,6 +19,14 @@ android {
     }
 }
 
+repositories {
+    maven {
+        url "file:///Users/Nayshins/Dropbox/Public/repository"
+    }
+}
+
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'me.jakenations:Java-Tic-Tac-Toe:1.0'
 }
