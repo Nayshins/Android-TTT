@@ -44,7 +44,6 @@ public abstract class VsComputer extends Activity {
             gameOver("X");
             setButtonStatus(false);
         }
-
     }
 
     private void setButtonStatus(boolean state) {
@@ -81,8 +80,6 @@ public abstract class VsComputer extends Activity {
             }
         }
     }
-
-
 
     public int convertCellToInt(String cellID) {
         return cellToMoveMap.get(cellID);
