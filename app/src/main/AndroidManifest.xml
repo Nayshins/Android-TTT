@@ -45,6 +45,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="jakenations.me.tictactoe.MainMenu" />
         </activity>
+        <activity
+            android:name=".VsComputer"
+            android:label="@string/title_activity_vs_computer" >
+        </activity>
     </application>
 
 </manifest>

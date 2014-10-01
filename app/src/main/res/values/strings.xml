@@ -18,5 +18,7 @@
     <string name="human4x4">Vs. Human 4 x 4</string>
     <string name="gameOver">Game over! \u0020 </string>
     <string name="isthewinner"> \u0020 is the winner!</string>
+    <string name="title_activity_vs_computer">VsComputer</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>
