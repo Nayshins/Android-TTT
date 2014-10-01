@@ -20,5 +20,6 @@
     <string name="isthewinner"> \u0020 is the winner!</string>
     <string name="title_activity_vs_computer">VsComputer</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_vs_human">VsHuman</string>
 
 </resources>

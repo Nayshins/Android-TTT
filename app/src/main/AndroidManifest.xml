@@ -49,6 +49,10 @@
             android:name=".VsComputer"
             android:label="@string/title_activity_vs_computer" >
         </activity>
+        <activity
+            android:name=".VsHuman"
+            android:label="@string/title_activity_vs_human" >
+        </activity>
     </application>
 
 </manifest>
