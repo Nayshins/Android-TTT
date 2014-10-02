@@ -27,7 +27,7 @@ public class VsHuman extends Activity {
     public Rules rules;
     public ArrayList<View> touchables;
 
-    private int turnCount = 0;
+    protected int turnCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +48,7 @@ public class VsHuman extends Activity {
         turnCount ++;
     }
 
-    private char getCurrentPlayer() {
+    protected char getCurrentPlayer() {
         if (turnCount % 2 == 0) {
             return 'X';
         } else {
@@ -56,7 +56,7 @@ public class VsHuman extends Activity {
         }
     }
 
-    private void setButtonStatus(boolean state) {
+    protected void setButtonStatus(boolean state) {
         for (View touchable : touchables) {
             if (touchable instanceof Button) {
                 touchable.setEnabled(state);

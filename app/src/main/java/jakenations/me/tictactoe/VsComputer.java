@@ -47,7 +47,7 @@ public abstract class VsComputer extends Activity {
         }
     }
 
-    private void setButtonStatus(boolean state) {
+    protected void setButtonStatus(boolean state) {
         for (View touchable: touchables) {
             if( touchable instanceof Button) {
                 touchable.setEnabled(state);
