@@ -3,6 +3,10 @@ Android Tic Tac Toe
 
 This is an Android app that uses my Java Unbeatable Tic Tac Toe engine. It can be built and played locally by using an emulator or personal android device.
 
+Requires:
+Android SDK >16
+
+
 Opening in Android Studio
 ==
 [Android Studio](https://developer.android.com/sdk/installing/studio.html)
@@ -13,7 +17,7 @@ Run on Emulator
 ==
 After importing the app into Android Studio, you can run the app on the emulator by going to the run menu and selecting run App. This will build the app and run it on your emulator.
 
-If you have not set up your emulator, [Google has a guide](http://developer.android.com/tools/devices/index.html) on setting one up. If you are finding that your emulator is running slowly, I have a [blog post](http://jakenations.me/2014/09/26/how-to-make-the-android-emulator-faster/) on speeding it up!
+If you have not set up your emulator, [Google has a guide](http://developer.android.com/tools/devices/managing-avds.html) on setting one up. If you are finding that your emulator is running slowly, I have a [blog post](http://jakenations.me/2014/09/26/how-to-make-the-android-emulator-faster/) on speeding it up!
 
 Run on Device
 ==
