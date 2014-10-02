@@ -33,6 +33,14 @@ public class VsHumanTest extends ActivityInstrumentationTestCase2 {
             Button cell = (Button) view.findViewById(R.id.c1);
             TouchUtils.clickView(this, cell);
             assertEquals("X", cell.getText());
+        }
+
+        @MediumTest
+        public void testCellLocks() {
+            final View view = vsHuman.getWindow().getDecorView();
+
+            Button cell = (Button) view.findViewById(R.id.c1);
+            TouchUtils.clickView(this, cell);;
             assertFalse(cell.isClickable());
         }
 
