@@ -1,9 +1,7 @@
 Android Tic Tac Toe
 ===========
 
-This is an Android app that uses my Java Unbeatable Tic Tac Toe engine.
-
-It can be built and played locally either through an emulator or on your personal android device.
+This is an Android app that uses my Java Unbeatable Tic Tac Toe engine. It can be built and played locally by using an emulator or personal android device.
 
 Opening in Android Studio
 ==
