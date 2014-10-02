@@ -17,8 +17,28 @@ Run on Emulator
 ==
 After importing the app into Android Studio, you can run the app on the emulator by going to the run menu and selecting run App. This will build the app and run it on your emulator.
 
-If you have not set up your emulator, click on the tools menu on the top of your screen. In the tools menu hover over Android, and then select the AVD Manager. This will bring up the Android Virtual Device Manager. From here select the Create button, now you should see something like this: [AVD](http://developer.android.com/images/developing/avd-dialog.png)
-The only required settings for the AVD are to set the SDK > 16 and that device screen is not larger than 5". There are certain settings that will make it run faster, and I have a [blog post](http://jakenations.me/2014/09/26/how-to-make-the-android-emulator-faster/) on speeding it up!
+### If you do not have an emulator set up
+
+In Android Studio, click on the tools menu on the top of your screen. In the tools menu hover over Android, and then select the AVD Manager.
+
+This will bring up the Android Virtual Device Manager. From here select the Create button, now you should see something like this: 
+
+
+
+
+
+
+
+
+
+
+
+
+![AVD](http://developer.android.com/images/developing/avd-dialog.png)
+
+The only required settings for the AVD are to set the SDK > 16, and that device screen cannot be larger than 5". 
+
+There are certain settings that will make it run faster, and I have a [blog post](http://jakenations.me/2014/09/26/how-to-make-the-android-emulator-faster/) on speeding it up!
 
 Run on Device
 ==
