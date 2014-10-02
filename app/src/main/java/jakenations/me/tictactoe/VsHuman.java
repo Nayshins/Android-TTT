@@ -2,6 +2,7 @@ package jakenations.me.tictactoe;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -65,6 +66,7 @@ public class VsHuman extends Activity {
 
     private void setButtonText(Button view, char marker) {
         if (marker == 'X') {
+            view.setTextColor(Color.parseColor("#FF4444"));
             view.setText(R.string.marker_X);
         } else if (marker == 'O') {
             view.setText(R.string.marker_O);

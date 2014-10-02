@@ -2,6 +2,7 @@ package jakenations.me.tictactoe;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -55,6 +56,7 @@ public abstract class VsComputer extends Activity {
     }
 
     private int setButtonText(Button view) {
+        view.setTextColor(Color.parseColor("#FF4444"));
         view.setText(R.string.marker_X);
         view.setClickable(false);
         return convertCellToInt((String) view.getTag());

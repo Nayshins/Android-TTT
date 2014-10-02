@@ -14,7 +14,7 @@
         android:id="@+id/winner"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="30dp"
         android:textStyle="bold"
         android:textColor="#FF4444"
         android:gravity="center" />
