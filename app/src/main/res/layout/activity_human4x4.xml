@@ -36,7 +36,7 @@
                 android:height="75dp"
                 android:id="@+id/c0"
                 android:tag="c0"
-                android:onClick="runGame"/>
+                android:onClick="rnGame"/>
             <Button
                 style="@style/CellStyle"
                 android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
                 android:layout_column="2"
                 android:width="75dp"
                 android:height="75dp"
-                android:onClick="runGame"/>
+                android:onClick="rnGame"/>
             <Button
                 style="@style/CellStyle"
                 android:layout_width="wrap_content"
