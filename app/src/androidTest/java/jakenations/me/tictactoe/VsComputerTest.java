@@ -59,10 +59,19 @@ public class VsComputerTest extends ActivityInstrumentationTestCase2 {
     @MediumTest
     public void testGameOver() {
         final View view = vsComputer.getWindow().getDecorView();
+
+        // moves = [0, 2, 4, 6, 8]
+        // computer_moves.take
+
         for (int i = 0; i < 9 ; i++) {
             if (i % 2 == 0 || i == 0) {
                 Button cell = (Button) view.findViewWithTag("c" + i);
                 TouchUtils.clickView(this, cell);
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
         assertTrue(vsComputer.rules.isGameOver());
