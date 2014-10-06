@@ -19,6 +19,8 @@ android {
     }
 }
 
+
+
 repositories {
     maven {
         url "http://s3.amazonaws.com/tttrepository/repository"
@@ -30,3 +32,18 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'me.jakenations:Java-Tic-Tac-Toe:1.0'
 }
+
+task monkeyBuild(type: Exec, dependsOn: 'installDebug') {
+    ignoreExitValue = true;
+    println "Monkey Build"
+    workingDir '../app/bin'
+    commandLine './UIMonkeyTest.sh'
+
+    doLast{
+        if (execResult.getExitValue() == 0) {
+            throw new GradleException('App crashed during Monkey Stress test')
+        }
+    }
+
+}
+connectedCheck.dependsOn monkeyBuild
